@@ -3,15 +3,18 @@ layout: post
 title: 로그인을 위한 jwt 사용법 with kotlin
 ---
 
-안녕하세요 우선 로그인을 위한 jwt 를 사용하기 위해 안내 블로그를 쓰기 시작한 박진우 입니다.ㅎㅎ
+안녕하세요
 
-우선 로그인 방식은 예전부터 꽤 많은 수정이 있었는데 요근래에 사용중인 jwt 방식에 대해서 포스팅 해보려고 합니다.
+우선 로그인을 위한 jwt 를 사용하기 위해 안내 블로그를 쓰기 시작한 박진우 입니다.ㅎㅎ
+
+우선 로그인 방식은 예전부터 꽤 많은 수정이 있었는데 <br>
+저는 요근래에 사용중인 jwt 방식에 대해서 포스팅 해보려고 합니다.
 
 jwt(Json Web Token)란 기본 정보들을 base 64 인코딩으로 먼저 코드 값으로 바꾸고
 
 header, payload, verify signature의 형태로 보여주는 구조를 의미 합니다.
 
-https://jwt.io
+[https://jwt.io](https://jwt.io)<br>
 위 사이트에 접속해보시면 좀 더 이해가 편하실 겁니다.
 
 header에는 알고리즘과 타입에 대한 정의가 기본적으로 되어 있고
@@ -20,7 +23,7 @@ payload에는 사용자가 사용하려는 데이터를 기반으로 한 정보�
 
 간단하게 데이터에 대한 인증 hash 정도로 생각하시면 될 것 같습니다.
 
-```
+```kotlin
 Jwts.builder()
 //헤더의 타입(type)을 지정할 수 있습니다. jwt를 사용하기 때문에 Header.JWT_TYPE로 사용해줍니다.
 .setHeaderParam(Header.TYPE, Header.JWT_TYPE)
@@ -43,4 +46,5 @@ Jwts.builder()
 //해싱 알고리즘과 시크릿 키를 설정할 수 있습니다.
 .signWith(privateKey, SignatureAlgorithm.RS256)
 .compact()
+
 ```
