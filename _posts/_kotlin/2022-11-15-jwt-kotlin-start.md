@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 로그인을 위한 jwt 사용법 with kotlin
-permalink: /kotlin/
+permalink: /kotlin/jwt-kotlin-start
 ---
 
 안녕하세요
@@ -18,8 +18,10 @@ header, payload, verify signature의 형태로 보여주는 구조를 의미 합
 [https://jwt.io](https://jwt.io)<br>
 위 사이트에 접속해보시면 좀 더 이해가 편하실 겁니다.
 
-header에는 알고리즘과 타입에 대한 정의가 기본적으로 되어 있고
-payload에는 사용자가 사용하려는 데이터를 기반으로 한 정보들이 들어있습니다.(간단하게 Base64 디코딩만 하면 얼마든지 내부 내용을 볼 수 있습니다.)
+header에는 알고리즘과 타입에 대한 정의가 기본적으로 되어 있고<br>
+payload에는 사용자가 사용하려는 데이터를 기반으로 한 정보들이 들어있습니다.<br>
+(간단하게 Base64 디코딩만 하면 얼마든지 내부 내용을 볼 수 있습니다.)
+
 마지막으로 verify signature 정보가 있는데 이 부분은 header에 들어있는 알고리즘으로 만든 사인 정보인데
 
 간단하게 데이터에 대한 인증 hash 정도로 생각하시면 될 것 같습니다.

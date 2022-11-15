@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 로그인을 위한 jwt 사용법 with kotlin
-permalink: /kotlin/
+permalink: /kotlin/jwt-kotlin-make-key
 ---
 
 안녕하세요
