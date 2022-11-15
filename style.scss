@@ -32,7 +32,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
-  color: $darkerGray;
+  color: $lightGray;
   font-weight: bold;
 
   line-height: 1.7;
@@ -122,12 +122,12 @@ img {
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $black;
-  background: $lightGray;
+  color: $lightGray;
+  background: $darkerGray;
 }
 ::selection {
-  color: $black;
-  background: $lightGray;
+  color: $lightGray;
+  background: $darkerGray;
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -156,7 +156,7 @@ img {
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid $darkerGray;
 
   @include mobile {
     text-align: center;
